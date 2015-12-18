@@ -9,17 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "IPFXFunction.h"
 
-@interface IPFXLine : NSObject
-@property (retain) NSObject<IPFXFunction> *func;
-@property (assign) CGFloat step;
-
-- (instancetype)initWithFunction:(NSObject<IPFXFunction>*)func andStep:(CGFloat)step;
-+ (instancetype)createWithP1:(IPFXVector*)p1 p2:(IPFXVector*)p2 v1:(IPFXVector*)v1 v2:(IPFXVector*)v2 f:(IPFXFunctionType)f;
-@end
-
 @interface IPFXInterpolator : NSObject
-- (instancetype)initWithPoints:(NSArray*)points andLines:(NSArray*)lines;
+/**
+ * parse URL to get encoded points and lines data
+ * it can be passed with or without host
+ * it should start with '?' char
+ * ex.
+ * http://ipfx.org/?p=7ffffffe&l=09c287fff63d67fff
+ * or
+ * ?p=7ffffffe&l=09c287fff63d67fff
+ * both will work
+ *
+ * @param url - data encoded in the url
+ * @return
+ */
 + (instancetype)parseUrl:(NSString*)url;
+
+/**
+ * calculate Interpolator function
+ * @param x -
+ * @return - F(x) if x belongs to [0, 1], 0 otherwise
+ */
 - (CGFloat)calc:(CGFloat)x;
 @end
 

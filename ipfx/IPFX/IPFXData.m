@@ -138,7 +138,7 @@
             }
             
             if(caret.pos > ldata.length){
-                return false;
+                return NO;
             }
             
             i++;
@@ -255,19 +255,21 @@
     return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f');
 }
 
-+ (NSInteger)readHexValue:(IPFXCaret *)caret size:(NSInteger)size {
++ (unsigned)readHexValue:(IPFXCaret *)caret size:(NSInteger)size {
     
     NSString *vs;
     
     NSRange range = NSMakeRange(caret.pos, size);
-    if(range.location < caret.data.length && range.location + range.length < caret.data.length)
+    if(range.location + range.length <= caret.data.length)
         vs = [caret.data substringWithRange:range];
     
     caret.pos = caret.pos + size;
     
     if(vs != nil){
-//WTF IS radix? test me  ////Integer.parseInt(vs, 16);
-        return [vs integerValue];
+        unsigned result = 0;
+        NSScanner *scanner = [NSScanner scannerWithString:vs];
+        [scanner scanHexInt:&result];
+        return result;
     } else {
         return -1;
     }

@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    IPFXInterpolator *interpolator = [IPFXInterpolator parseUrl:@"http://www.ipfx.org/?p=7ffffffe&l=0986f78e85bf345a5"];
+    IPFXInterpolator *interpolator = [IPFXInterpolator parseUrl:@"http://www.ipfx.org/?p=7ffffffe&l=3cff0829f"];
    
     for (NSUInteger i = 0; i <= 10; i++) {
         CGFloat x = (CGFloat)i / 10.0f;
