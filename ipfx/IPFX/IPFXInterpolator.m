@@ -73,8 +73,8 @@
             
     }
     
-    float dx = p2.x - p1.x;
-    float step;
+    CGFloat dx = p2.x - p1.x;
+    CGFloat step;
     if (dx > 0){
         step = 1 / dx;
     } else {

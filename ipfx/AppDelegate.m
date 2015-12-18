@@ -18,11 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    IPFXInterpolator *interpolator = [IPFXInterpolator parseUrl:@"http://www.ipfx.org/?p=7ffffffe&l=3cff0829f"];
+    IPFXInterpolator *interpolator = [IPFXInterpolator parseUrl:@"http://www.ipfx.org/?p=7ffffffe575efffe9e02fffed8f6fffe&l=2f13c5ac138b3d6ad338a5a77a8386807d6e"];
    
-    for (NSUInteger i = 0; i <= 10; i++) {
-        CGFloat x = (CGFloat)i / 10.0f;
-        NSLog(@"x: %0.1f | f(x): %0.4f", x, [interpolator calc:x]);
+    for (NSUInteger i = 0; i <= 100; i++) {
+        CGFloat x = (CGFloat)i / 100.0f;
+        NSLog(@"x: %0.4f | f(x): %0.4f", x, [interpolator calc:x]);
     }
     
     return YES;

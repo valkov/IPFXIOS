@@ -171,7 +171,7 @@
     [points addObject:p0];
     
     while(caret.pos < data.length){
-        [points addObject:[[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]]];
+        [points addObject:[[IPFXVector alloc] initWithX:[self fromGridX:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]]];
     }
     
     [points addObject:p2];
@@ -193,24 +193,24 @@
         
         switch (f) {
             case IPFXFunctionTypeCurve : {
-                v1 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
-                v2 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
+                v1 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
+                v2 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
                 break;
             }
             case IPFXFunctionTypeCurveLL : {
                 v1 = [[IPFXVector alloc] initWithX:0 andY:0];
-                v2 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
+                v2 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
                 break;
             }
             case IPFXFunctionTypeCurveLR : {
-                v1 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
+                v1 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
                 v2 = [[IPFXVector alloc] initWithX:0 andY:0];
                 break;
             }
             case IPFXFunctionTypeCurveT : {
                 IPFXVector *p1 = points[i];
                 IPFXVector *p2 = points[i+1];
-                v1 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
+                v1 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
                 v2 = [[p1 add:v1] sub:p2];
                 break;
             }
@@ -218,7 +218,7 @@
                 break;
             }
             case IPFXFunctionTypeHalfSine : {
-                v1 = [[IPFXVector alloc] initWithX:[self fromGridY:[self readHexValue:caret size:4]] andY:[self fromGridY:[self readHexValue:caret size:4]]];
+                v1 = [[IPFXVector alloc] initWithX:[self fromGridVX:[self readHexValue:caret size:4]] andY:[self fromGridVY:[self readHexValue:caret size:4]]];
                 break;
             }
             case IPFXFunctionTypeConstant : {
@@ -236,19 +236,19 @@
 }
 
 + (CGFloat)fromGridX:(NSInteger)x {
-    return (float)x / GRID_X;
+    return (CGFloat)x / GRID_X;
 }
 
 + (CGFloat)fromGridY:(NSInteger)y {
-    return ((float)y - GRID_Y0) / GRID_Y;
+    return ((CGFloat)y - GRID_Y0) / GRID_Y;
 }
 
 + (CGFloat)fromGridVX:(NSInteger)vx {
-    return ((float)vx - GRID_Y0) / GRID_VX;
+    return ((CGFloat)vx - GRID_Y0) / GRID_VX;
 }
 
 + (CGFloat)fromGridVY:(NSInteger)vy {
-    return ((float)vy - GRID_Y0) / GRID_VY;
+    return ((CGFloat)vy - GRID_Y0) / GRID_VY;
 }
 
 + (BOOL)inAlphabet:(char)c {

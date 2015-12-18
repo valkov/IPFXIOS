@@ -43,7 +43,7 @@
 }
 
 - (IPFXVector*)slide:(IPFXVector *)v i:(CGFloat)i {
-    float o = 1 - i;
+    CGFloat o = 1 - i;
     return [[IPFXVector alloc] initWithX:self.x * o + v.x * i andY:self.y * o + v.y * i];
 }
 
