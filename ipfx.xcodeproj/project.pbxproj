@@ -13,6 +13,13 @@
 		6E21FAAE1C2206B700096597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E21FAAC1C2206B700096597 /* Main.storyboard */; };
 		6E21FAB01C2206B700096597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E21FAAF1C2206B700096597 /* Assets.xcassets */; };
 		6E21FAB31C2206B700096597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E21FAB11C2206B700096597 /* LaunchScreen.storyboard */; };
+		6E21FAC41C220C0300096597 /* IPFXVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E21FAC31C220C0300096597 /* IPFXVector.m */; };
+		6E21FAC71C220C1900096597 /* IPFXConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E21FAC61C220C1900096597 /* IPFXConstant.m */; };
+		6EAFE3B01C249BE000CEE949 /* IPFXCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE3AF1C249BE000CEE949 /* IPFXCurve.m */; };
+		6EAFE3B31C249D8B00CEE949 /* IPFXHalfSine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE3B21C249D8B00CEE949 /* IPFXHalfSine.m */; };
+		6EAFE3B61C249F0C00CEE949 /* IPFXLinear.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE3B51C249F0C00CEE949 /* IPFXLinear.m */; };
+		6EAFE3B91C249FF300CEE949 /* IPFXData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE3B81C249FF300CEE949 /* IPFXData.m */; };
+		6EAFE3BC1C24AD5600CEE949 /* IPFXInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE3BB1C24AD5600CEE949 /* IPFXInterpolator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,21 @@
 		6E21FAAF1C2206B700096597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E21FAB21C2206B700096597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E21FAB41C2206B700096597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E21FAC11C220C0300096597 /* IPFXFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXFunction.h; sourceTree = "<group>"; };
+		6E21FAC21C220C0300096597 /* IPFXVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXVector.h; sourceTree = "<group>"; };
+		6E21FAC31C220C0300096597 /* IPFXVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXVector.m; sourceTree = "<group>"; };
+		6E21FAC51C220C1900096597 /* IPFXConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXConstant.h; sourceTree = "<group>"; };
+		6E21FAC61C220C1900096597 /* IPFXConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXConstant.m; sourceTree = "<group>"; };
+		6EAFE3AE1C249BE000CEE949 /* IPFXCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXCurve.h; sourceTree = "<group>"; };
+		6EAFE3AF1C249BE000CEE949 /* IPFXCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXCurve.m; sourceTree = "<group>"; };
+		6EAFE3B11C249D8B00CEE949 /* IPFXHalfSine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXHalfSine.h; sourceTree = "<group>"; };
+		6EAFE3B21C249D8B00CEE949 /* IPFXHalfSine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXHalfSine.m; sourceTree = "<group>"; };
+		6EAFE3B41C249F0C00CEE949 /* IPFXLinear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXLinear.h; sourceTree = "<group>"; };
+		6EAFE3B51C249F0C00CEE949 /* IPFXLinear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXLinear.m; sourceTree = "<group>"; };
+		6EAFE3B71C249FF300CEE949 /* IPFXData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXData.h; sourceTree = "<group>"; };
+		6EAFE3B81C249FF300CEE949 /* IPFXData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXData.m; sourceTree = "<group>"; };
+		6EAFE3BA1C24AD5600CEE949 /* IPFXInterpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPFXInterpolator.h; sourceTree = "<group>"; };
+		6EAFE3BB1C24AD5600CEE949 /* IPFXInterpolator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPFXInterpolator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 		6E21FAA21C2206B700096597 /* ipfx */ = {
 			isa = PBXGroup;
 			children = (
+				6E21FAC01C220C0300096597 /* IPFX */,
 				6E21FAA61C2206B700096597 /* AppDelegate.h */,
 				6E21FAA71C2206B700096597 /* AppDelegate.m */,
 				6E21FAA91C2206B700096597 /* ViewController.h */,
@@ -77,6 +100,28 @@
 				6E21FAA41C2206B700096597 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E21FAC01C220C0300096597 /* IPFX */ = {
+			isa = PBXGroup;
+			children = (
+				6E21FAC11C220C0300096597 /* IPFXFunction.h */,
+				6E21FAC21C220C0300096597 /* IPFXVector.h */,
+				6E21FAC31C220C0300096597 /* IPFXVector.m */,
+				6E21FAC51C220C1900096597 /* IPFXConstant.h */,
+				6E21FAC61C220C1900096597 /* IPFXConstant.m */,
+				6EAFE3AE1C249BE000CEE949 /* IPFXCurve.h */,
+				6EAFE3AF1C249BE000CEE949 /* IPFXCurve.m */,
+				6EAFE3B11C249D8B00CEE949 /* IPFXHalfSine.h */,
+				6EAFE3B21C249D8B00CEE949 /* IPFXHalfSine.m */,
+				6EAFE3B41C249F0C00CEE949 /* IPFXLinear.h */,
+				6EAFE3B51C249F0C00CEE949 /* IPFXLinear.m */,
+				6EAFE3B71C249FF300CEE949 /* IPFXData.h */,
+				6EAFE3B81C249FF300CEE949 /* IPFXData.m */,
+				6EAFE3BA1C24AD5600CEE949 /* IPFXInterpolator.h */,
+				6EAFE3BB1C24AD5600CEE949 /* IPFXInterpolator.m */,
+			);
+			path = IPFX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EAFE3B01C249BE000CEE949 /* IPFXCurve.m in Sources */,
+				6EAFE3B61C249F0C00CEE949 /* IPFXLinear.m in Sources */,
+				6E21FAC41C220C0300096597 /* IPFXVector.m in Sources */,
+				6EAFE3BC1C24AD5600CEE949 /* IPFXInterpolator.m in Sources */,
 				6E21FAAB1C2206B700096597 /* ViewController.m in Sources */,
 				6E21FAA81C2206B700096597 /* AppDelegate.m in Sources */,
+				6E21FAC71C220C1900096597 /* IPFXConstant.m in Sources */,
+				6EAFE3B91C249FF300CEE949 /* IPFXData.m in Sources */,
 				6E21FAA51C2206B700096597 /* main.m in Sources */,
+				6EAFE3B31C249D8B00CEE949 /* IPFXHalfSine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +352,7 @@
 				6E21FAB91C2206B700096597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
